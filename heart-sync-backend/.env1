@@ -1,0 +1,4 @@
+OPENAI_API_KEY=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
+HF_API_KEY=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
+MONGODB_URI=mongodb://anshika:qwerty@mongo:27017 mongo-express
+PORT=4000
