@@ -5,11 +5,13 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import OpenAI from 'openai';
-
+import { registerUser, loginUser } from './auth.js';
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.post('/api/auth/register', registerUser);
+app.post('/api/auth/login', loginUser);
 // Config
 const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URI;
